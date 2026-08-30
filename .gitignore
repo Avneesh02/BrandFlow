@@ -1,0 +1,48 @@
+# env
+.env
+.env.local
+.env.*.local
+.env.example
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+.pyo
+.pyd
+
+# node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# uploads & local data
+uploads/
+chroma_data/
+*.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# logs
+*.log
+# =========================
+# Database
+# =========================
+*.db
+*.sqlite
+*.sqlite3

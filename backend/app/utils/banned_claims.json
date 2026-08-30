@@ -1,0 +1,13 @@
+{
+  "patterns": [
+    "100\\s*%\\s*guaranteed",
+    "cure[sd]?\\s+(cancer|diabetes|covid)",
+    "miracle\\s+(cure|drug|pill)",
+    "fda\\s+approved(?!\\s+by)",
+    "#1\\s+in\\s+the\\s+world",
+    "competitor\\s+\\w+\\s+is\\s+(bad|worse|terrible)",
+    "risk[\\-\\s]?free",
+    "no\\s+side\\s+effects",
+    "clinically\\s+proven\\s+to\\s+cure"
+  ]
+}
