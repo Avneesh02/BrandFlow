@@ -20,4 +20,4 @@ COPY --from=frontend-builder /app/frontend/dist /app/frontend/dist
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "cd /app/backend && uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
+CMD ["sh", "-c", "cd /app/backend && alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]

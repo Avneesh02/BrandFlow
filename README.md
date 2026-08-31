@@ -134,6 +134,23 @@ Final Verdict
 
 ## 🚀 Running the Project
 
+## Deploying with Supabase and Render
+
+1. In Supabase, create a project and wait until it is ready. Select **Connect**,
+   then copy the **Session pooler** connection string (port `5432`). This is the
+   best option for Render because it works over IPv4. Replace its password
+   placeholder with your database password.
+2. In Render, select **New +** → **Blueprint**, connect this GitHub repository,
+   and deploy the `render.yaml` blueprint. Provide the requested secret values:
+   - `DATABASE_URL`: the Supabase Session pooler connection string.
+   - `GEMINI_API_KEY`: your Google Gemini API key.
+3. Render runs the Alembic migration automatically when the service starts. Wait
+   for the deploy to show **Live**, then open `https://<your-render-service>.onrender.com/health`.
+
+The deployed frontend and API are served by the same Render service, so no
+frontend URL configuration is needed. Do not add the Supabase URL, anon key, or
+database password to the frontend or commit them to GitHub.
+
 ### Backend
 
 ```bash
