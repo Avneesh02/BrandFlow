@@ -31,6 +31,10 @@ class Settings(BaseSettings):
     upload_dir: str = str(_BACKEND_DIR / "uploads")
     max_upload_size_mb: int = 10
 
+    @property
+    def frontend_origins(self) -> list[str]:
+        return [origin.strip() for origin in self.frontend_origin.split(",") if origin.strip()]
+
     login_rate_limit: int = 10
     campaign_rate_limit: int = 5
 

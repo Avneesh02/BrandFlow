@@ -1,0 +1,12 @@
+node_modules
+frontend/node_modules
+backend/.venv
+backend/__pycache__
+backend/**/*.pyc
+backend/chroma_data
+backend/uploads
+backend/brandflow.db
+.git
+.gitignore
+npm-debug.log
+.DS_Store

@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: brandflow
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./brandflow.db
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: FRONTEND_ORIGIN
+        value: https://brandflow.onrender.com
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: POLLINATIONS_BASE_URL
+        value: https://image.pollinations.ai/prompt
+      - key: CHROMA_PERSIST_DIR
+        value: ./chroma_data
+      - key: UPLOAD_DIR
+        value: ./uploads
+      - key: MAX_UPLOAD_SIZE_MB
+        value: "10"
+      - key: LOGIN_RATE_LIMIT
+        value: "10"
+      - key: CAMPAIGN_RATE_LIMIT
+        value: "5"
