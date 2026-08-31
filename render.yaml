@@ -6,7 +6,9 @@ services:
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        value: sqlite:///./brandflow.db
+        fromDatabase:
+          name: brandflow-db
+          property: connectionString
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_ALGORITHM
@@ -27,3 +29,8 @@ services:
         value: "10"
       - key: CAMPAIGN_RATE_LIMIT
         value: "5"
+
+databases:
+  - name: brandflow-db
+    databaseName: brandflow
+    user: brandflow
